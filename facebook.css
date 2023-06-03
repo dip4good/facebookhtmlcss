@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+    position: relative;
+    height: 115vh;
+    overflow-x: hidden;
+}
+.container{
+    display:flex;
+}
+.recent{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20vw;
+    top: 13vh;
+    margin-right: 30vw ;
+}
+#facebook{
+    height: 45px;
+    width: 200px;
+    margin: -20px;
+    padding-bottom: 15px;
+}
+.title{
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.sub-title{
+    color:gray;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+#box{
+    display: flex;
+}
+.box1, #box2{
+    position: relative;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.box1:hover, #box2:hover{
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2) ;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+#box-img, #box2-img{
+    height: 160px;
+    width: 160px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#add-account{
+    color: rgb(87, 87, 181);
+}
+.username{
+    font-size: 18px;
+    line-height: 22px;
+    padding: 12px;
+    text-align: center;
+    color:rgb(75,79,86);
+}
+.cancel{
+    position: absolute;
+    left: 8px;
+    color: white;
+    top: 5px;
+    text-align: center;
+    width: 20px;
+    background-color: rgb(63, 62, 62);
+    opacity: 0.5;
+}
+.box1:hover .cancel{
+    background-color: white;
+    opacity: 1.0;
+    color: rgb(194,193,193);
+    height:25px;
+    width: 25px;
+    line-height: 22px;
+    top: -5px;
+    left: -5px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+#login{
+    position: relative;
+    background-color: white;
+    height: 350px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    top:18vh;
+    justify-content: flex-start;
+    padding: 10px 10px 20px 10px;
+    align-items: center;
+    box-shadow: 0 5px 5px 3px gainsboro;
+}
+#login > a{
+    margin: 18px 0;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(78, 78, 216);
+}
+#login > a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+hr{
+    width: 95%;
+    height: 0.1%;
+    background-color: rgb(194,193,193);
+    border: none;
+    margin-top: 100px;
+}
+#login > input[type=text]  #login > input[type=password]{
+    height: 35%;
+    margin: 8px 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+    width: 95%;
+    border: 1.5px solid wheat;
+}
+#login > input[type=password]{
+    margin-top: 15px;
+}
+#login > input[type=text]:focus  #login > input[type=password]:focus{
+    outline:none;
+    border: 1px solid blue;
+    box-shadow: 0 0 5px #719ECE;
+    caret-color: blue;
+}
+#login-button{
+    background-color: #1861b0;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+    width: 95%;
+}
+#login-button:hover{
+    background-color: #166FE5;
+    cursor: pointer;
+}
+#cn-acc{
+    background-color: rgb(49, 202, 49);
+    color: aliceblue;
+    font-size: 13px;
+    border-radius: 5px;
+    border:none;
+    height: 25px;
+    margin: 10px;
+    font-weight: bold;
+    width: 60%;
+}
+#cn-acc:hover{
+    background-color: rgb(76, 70, 70);
+    cursor: pointer;
+}
+p{
+    font-size: 15px;
+    position: absolute;
+    bottom: -55px;
+}
+footer{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 20px;
+    color:#c6d3e0;
+    font-size: 12px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    word-spacing: 12px;
+    list-style: 20px;
+}
+@media screen and (max-width:1114px) {
+    .recent{
+        left: 70px;
+        margin-right: 22vw;
+    }
+    #login{
+        right: 30px;
+    }
+}
+
+@media screen and (max-width:900px){
+    body{
+        height: 150vh;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .recent{
+        margin-right: 0;
+        align-items: center;
+        left: 0;
+        top: 20px;
+    }
+    .box1{
+        margin-right: 5px;
+    }
+    #box2{
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    #login{
+        text-align: center;
+        left: 0;
+        margin-right: 0;
+        margin-top: -30px;
+        top: 80px;
+    }
+    .recent, #login{
+        position: relative;
+    }
+    footer{
+        position: absolute;
+        padding: 20px;
+        width: 100vw;
+    }
+}
+@media screen and (max-height:670px){
+    footer{
+        position: relative;
+        top: 100px;
+    }
+}
+
+
+
+
+
+
+
+
